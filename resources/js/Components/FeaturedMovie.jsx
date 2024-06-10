@@ -1,13 +1,4 @@
-import { Link } from "@inertiajs/inertia-react";
-import PropType from "prop-types";
-
-FeaturedMovie.propTypes = {
-    slug: PropType.string.isRequired,
-    name: PropType.string.isRequired,
-    category: PropType.string.isRequired,
-    thumbnail: PropType.string.isRequired,
-    rating: PropType.number,
-};
+import { Link } from "@inertiajs/react";
 
 export default function FeaturedMovie({
     slug,

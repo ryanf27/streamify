@@ -20,15 +20,23 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-
 Route::prefix('prototype')->group(function () {
     route::get('/login', function () {
-        return inertia::render('prototype/login');
-    })->name('login');
+        return inertia::render('Prototype/Login');
+    })->name('prototype.login');
     route::get('/register', function () {
-        return inertia::render('prototype/register');
-    })->name('register');
-});
+        return inertia::render('Prototype/Register');
+    })->name('prototype.register');
+    route::get('/dashboard', function () {
+        return Inertia::render('Prototype/Dashboard');
+    })->name('prototype.dashboard');
+    route::get('/subscriptionPlan', function () {
+        return Inertia::render('Prototype/SubscriptionPlan');
+    })->name('prototype.subscriptionPlan');
 
+    route::get('/movie/{slug}', function () {
+        return Inertia::render('Prototype/Movie/Show');
+    })->name('prototype.movie.show');
+});
 
 require __DIR__ . '/auth.php';

@@ -1,12 +1,4 @@
-import { Link } from "@inertiajs/inertia-react";
-import PropType from "prop-types";
-
-MovieCard.propType = {
-    slug: PropType.string.isRequired,
-    name: PropType.string.isRequired,
-    category: PropType.string.isRequired,
-    thumbnail: PropType.string.isRequired,
-};
+import { Link } from "@inertiajs/react";
 
 export default function MovieCard({ slug, name, category, thumbnail }) {
     return (
