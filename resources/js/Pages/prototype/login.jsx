@@ -14,7 +14,7 @@ export default function Login() {
                         className="hidden laptopLg:block laptopLg:max-w-[450px] laptopXl:max-w-[640px]"
                         alt=""
                     />
-                </div>  
+                </div>
 
                 <div className="py-24 flex laptopLg:ml-[680px] laptopXl:ml-[870px]">
                     <div>
