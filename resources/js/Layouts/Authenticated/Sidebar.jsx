@@ -4,14 +4,18 @@ import { UserMenu, UserOthers } from "@/Layouts/Authenticated/MenuList";
 
 export default function Sidebar({ auth }) {
     return (
-        <aside className="fixed z-50 w-[300px] h-full">
-            <div className="flex flex-col p-[30px] pr-0 border-r border-gray-[#F1F1F1] overflow-y-auto h-full">
+        <aside className="fixed z-50 w-[300px] h-full bg-white shadow-lg">
+            <div className="flex flex-col p-6 pr-0 border-r border-gray-200 overflow-y-auto h-full">
                 <a href="/">
-                    <img src="/images/moonton.svg" alt="" />
+                    <img
+                        src="/images/moonton.svg"
+                        alt="Moonton Logo"
+                        className="h-12 w-auto"
+                    />
                 </a>
-                <div className="links flex flex-col mt-[60px] h-full gap-[50px]">
+                <div className="links flex flex-col mt-10 h-full gap-12">
                     <div>
-                        <div className="text-gray-1 text-sm mb-4">Menu</div>
+                        <div className="text-gray-600 text-sm mb-4">Menu</div>
                         {UserMenu.map((menu, index) => (
                             <MenuItem
                                 key={`${index}-${menu.text}`}
@@ -25,7 +29,7 @@ export default function Sidebar({ auth }) {
                         ))}
                     </div>
                     <div>
-                        <div className="text-gray-1 side-link mb-4">Others</div>
+                        <div className="text-gray-600 text-sm mb-4">Others</div>
                         {UserOthers.map((menu, index) => (
                             <MenuItem
                                 key={`${index}-${menu.text}`}

@@ -5,7 +5,7 @@ export default function Input({
     name,
     value,
     defaultValue,
-    className,
+    className = "",
     variant = "primary",
     autoComplete,
     required,
@@ -20,7 +20,7 @@ export default function Input({
         if (isFocused) {
             input.current.focus();
         }
-    }, []);
+    }, [isFocused]);
 
     return (
         <div className="flex flex-col items-start">
@@ -29,9 +29,11 @@ export default function Input({
                 name={name}
                 value={value}
                 defaultValue={defaultValue}
-                className={`rounded-2xl bg-form-bg py-[13px] px-7 w-full ${
-                    isError && "input-error"
-                } input-${variant} ${className}`}
+                className={`rounded-2xl py-3.5 px-7 w-full bg-gray-800 focus:ring-2 focus:ring-indigo-600 ${
+                    isError ? "border-red-500" : ""
+                } ${
+                    variant === "primary" ? "border border-gray-700" : ""
+                } ${className}`}
                 ref={input}
                 autoComplete={autoComplete}
                 required={required}

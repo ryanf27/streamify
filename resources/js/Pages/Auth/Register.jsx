@@ -25,29 +25,28 @@ export default function Register() {
 
     const submit = (e) => {
         e.preventDefault();
-
         post(route("register"));
     };
 
     return (
         <>
             <Head title="Sign Up" />
-            <div className="mx-auto max-w-screen min-h-screen bg-black text-white md:px-10 px-3">
-                <div className="fixed top-[-50px] hidden lg:block">
+            <div className="mx-auto min-h-screen bg-black text-white px-3 md:px-10">
+                <div className="fixed -top-12 hidden lg:block">
                     <img
                         src="/images/signup-image.png"
-                        className="hidden laptopLg:block laptopLg:max-w-[450px] laptopXl:max-w-[640px]"
+                        className="hidden lg:block lg:max-w-[450px] xl:max-w-[640px]"
                         alt=""
                     />
                 </div>
-                <div className="py-24 flex laptopLg:ml-[680px] laptopXl:ml-[870px]">
-                    <div>
+                <div className="flex py-6 lg:ml-[680px] xl:ml-[870px]">
+                    <div className="w-[370px]">
                         <img src="/images/moonton-white.svg" alt="" />
-                        <div className="my-[70px]">
-                            <div className="font-semibold text-[26px] mb-3">
+                        <div className="my-4">
+                            <div className="mb-2 text-[26px] font-semibold">
                                 Sign Up
                             </div>
-                            <p className="text-base text-[#767676] leading-7">
+                            <p className="text-base leading-7 text-gray-400">
                                 Explore our new movies and get <br />
                                 the better insight for your life
                             </p>
@@ -110,17 +109,17 @@ export default function Register() {
                                     />
                                 </div>
                             </div>
-                            <div className="grid space-y-[14px] mt-[30px]">
-                                <Button type="submit" processing={processing}>
-                                    <span className="text-base font-semibold">
-                                        Sign Up
-                                    </span>
+                            <div className="my-4 ">
+                                <Button
+                                    type="submit"
+                                    processing={processing}
+                                    className="mb-2"
+                                >
+                                    Sign Up
                                 </Button>
                                 <Link href={route("login")}>
                                     <Button variant="light-outline">
-                                        <span className="text-base text-white">
-                                            Sign In to My Account
-                                        </span>
+                                        Sign In to My Account
                                     </Button>
                                 </Link>
                             </div>
