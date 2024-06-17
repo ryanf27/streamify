@@ -17,6 +17,8 @@ use App\Http\Controllers\User\MovieController as AdminMovieController;
 |
 */
 
+// MIDTRANS ROUTE
+Route::post('midtrans/notification', [SubscriptionPlanController::class, 'midtransCallback']);
 
 Route::redirect('/', '/login');
 
